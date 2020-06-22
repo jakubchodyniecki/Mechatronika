@@ -1,0 +1,8 @@
+x=-10 : .05 : 10;
+plot(x, 4 * x .* (50-x.^2));
+grid on;
+hold on;
+plot(x, 4 * x .* (45-x.^2));
+plot(x, 4 * x .* (35-x.^2));
+plot(x, 4 * x .* (20-x.^2));
+hold off;
