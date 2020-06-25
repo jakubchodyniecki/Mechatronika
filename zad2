@@ -1,8 +1,15 @@
-x=-10 : .05 : 10;
-plot(x, 4 * x .* (50-x.^2));
+x=linspace(-20,20,1000);
+for p = 1:5:100
+U=(p-x.^2).^2;
+subplot(1,2,1);
+plot(x,U);
+hold all;
 grid on;
-hold on;
-plot(x, 4 * x .* (45-x.^2));
-plot(x, 4 * x .* (35-x.^2));
-plot(x, 4 * x .* (20-x.^2));
-hold off;
+end
+for p = 1:5:100
+F= 4 * x .* (p-x.^2)
+subplot(1,2,2);
+plot(x,F);
+hold all;
+grid on;
+end
